@@ -55,8 +55,36 @@
 .add-pad{
     padding: 30px 0px;
 }
+.search-by-type{
+    display: flex;
+    align-items: center;
+}
+.search-by-type input{
+    height: 25px;
+    width: 163.5px;
+    margin-right: 5px;
+}
+#mountainList{
+    width: 163.5px;
+}
+#search-submit {
+    height: 23px;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 2px;
+}
+#search-submit:hover {
+    border-color: black;
+    transform: scale(1.03);
+}
 .force-pad{
+    display: flex;
     padding-left: 0 !important;
+}
+.force-pad label, .search-by-type label {
+    width: 105px;
 }
 footer {
     text-align: center;
@@ -86,6 +114,7 @@ footer p {
 /* mount Css */
 .mount {
     background: url(../img/otherHero.jpg);
+    overflow: hidden;
 }
 
 .mountains, .mountains-add {
@@ -96,9 +125,10 @@ footer p {
     border-radius: 10px;
     border: 1px solid rgba(214, 213, 211, 0.253);
     color: #fff;
-    padding:10px 20px;
+    padding:10px 20px 30px 20px;
     margin-top: 20px;
-
+    height: fit-content;
+    overflow: scroll;
 }
 .mountains {
     max-width: 800px;
@@ -106,13 +136,17 @@ footer p {
 
 .mount-disc {
     float: right;
-    margin:0 20px 10px 20px;
+    margin: auto;
     border-radius: 20px;
     height: 200px;
 }
-.mountain-disc-main {
+.mountain-disc-main{
     width: 400px;
     height: 200px;
+    display: grid;
+    place-content: center;
+}
+.disc-carrier {
     display: grid;
     place-content: center;
 }
@@ -144,6 +178,27 @@ footer p {
     height: 100vh;
     width: 100%;
 }
+.search-disc-main {
+    display: grid;
+    gap: 15px;
+    overflow: auto;
+    height: fit-content;
+    max-height: 100vh;
+}
+.user-search-result:not(:first-child, :nth-child(2), :nth-child(3)):last-child{
+    margin-bottom: 250px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.user-search-result {
+    border: 1px solid rgba(128, 128, 128, 0.384);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+
 /* media query */
 
 @media screen and (max-width: 550px) {
