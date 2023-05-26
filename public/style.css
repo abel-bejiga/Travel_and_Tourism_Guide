@@ -67,13 +67,16 @@
 #mountainList{
     width: 163.5px;
 }
-#search-submit {
+#search-submit, .reset-btn {
     height: 23px;
     border-color: transparent;
     display: flex;
     align-items: center;
     font-size: 13px;
     border-radius: 2px;
+}
+.reset-btn {
+    margin-left: 5px;
 }
 #search-submit:hover {
     border-color: black;
@@ -191,13 +194,17 @@ footer p {
 ::-webkit-scrollbar {
     display: none;
 }
-.user-search-result {
+.user-search-result, .new-bod {
     border: 1px solid rgba(128, 128, 128, 0.384);
     border-radius: 10px;
     padding: 10px;
 
 }
-
+.new-bod-cont{
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
 
 /* media query */
 
