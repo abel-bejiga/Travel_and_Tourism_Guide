@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../enjoying-the-outdoors-20230524T175939Z-001/enjoying-the-outdoors/public/nationalParks.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/daae0fece6.js" crossorigin="anonymous"></script>
 </head>
 <body class="mount">
     <div class="mask"></div>
@@ -40,26 +42,40 @@
         </select>
 
     </main> -->
+    <div class="result-added">
     <main class="mountains">
         <div class="container add-pad">
           <div class="d-grid gap-1">
             <div class="col force-pad">
               <label for="mountainList">Mountain List:</label>
               <select id="mountainList">
-                <option value="">Select One</option>
+                <option value="0">Select One</option>
               </select>
             </div>
             <div class="search-by-type">
             <label for="search">Search Here:</label>
             <input type="text" id="search" placeholder="Mt. Bond">
             <button type="submit" id="search-submit">Search</button>
-            <button type="submit" class="reset-btn" id="search-reset-btn">Reset</button>
+            <button type="submit" class="reset-btn" id="more-result" style="display: none;">more results</button>
+            <button type="submit" class="reset-btn" id="less-result" style="display: none;">less results</button>
+            <button type="submit" class="reset-btn" id="search-reset-btn" style="display: none;">Reset</button>
           </div>
           </div>
         </div>
         <section id="mount-search">
         </section>
+        <section class="addnl-result" id="addnl-search-result">
+          <!-- <button type="submit" id="more-result" style="display: none;">more result<i class="fa-solid fa-angles-right"></i></button>
+          <button type="submit" id="more-result2" style="display: none;">less result<i class="fa-solid fa-angles-left"></i></button> -->
+        </section>
+        <div class="result-mounts" style="display: none;">
+          <!-- <div class="connector"></div> -->
+        
+        </div>
       </main>
+    </div>
+
+
 
       <footer>
         <p>Copysirght &copy;2023 Travel and Tourism Guide<br>All rights reserved.</p>
@@ -68,6 +84,6 @@
       <!-- scripts -->
       <script src="../enjoying-the-outdoors-20230524T175939Z-001/enjoying-the-outdoors/scripts/mountainData.js"></script>
       <script src="../enjoying-the-outdoors-20230524T175939Z-001/enjoying-the-outdoors/scripts/mountainInfo.js"></script>
-      <script src="../enjoying-the-outdoors-20230524T175939Z-001/enjoying-the-outdoors/scripts/dom.js"></script>
+      <!-- <script src="../enjoying-the-outdoors-20230524T175939Z-001/enjoying-the-outdoors/scripts/dom.js"></script> -->
     </body>
 </html>
